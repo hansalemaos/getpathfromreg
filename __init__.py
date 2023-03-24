@@ -3,15 +3,15 @@ import os
 from reggisearch import search_values
 
 
-def get_bluestacks_config_file():
+def get_bluestacks_user_folder():
     di = search_values(
         mainkeys=r"HKEY_LOCAL_MACHINE\SOFTWARE\BlueStacks_nxt", subkeys="UserDefinedDir"
     )
     bstconfigpath = di[r"HKEY_LOCAL_MACHINE\SOFTWARE\BlueStacks_nxt"]["UserDefinedDir"]
     return bstconfigpath
 
-def get_bluestacks_user_folder():
-    bstconfigpath=get_bluestacks_config_file()
+def get_bluestacks_config_file():
+    bstconfigpath=get_bluestacks_user_folder()
     bstconfigpath = os.path.normpath(os.path.join(bstconfigpath, "bluestacks.conf"))
     return bstconfigpath
 
