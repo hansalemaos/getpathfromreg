@@ -6,8 +6,8 @@
 ```python
 
 from getpathfromreg import get_tesseract_exe,get_bluestacks_user_folder,get_bluestacks_config_file
-print(get_bluestacks_config_file())
 print(get_bluestacks_user_folder())
+print(get_bluestacks_config_file())
 print(get_tesseract_exe())
 print(get_hd_player_bluestacks())
 
